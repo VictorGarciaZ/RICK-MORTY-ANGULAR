@@ -1,0 +1,21 @@
+.gallery {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &_card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        border-radius: 30px;
+        padding: 10px;
+    }
+    &_img{
+        width: 250px;
+        height: 250px;
+
+    }
+}

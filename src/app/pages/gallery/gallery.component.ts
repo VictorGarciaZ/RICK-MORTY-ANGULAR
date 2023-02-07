@@ -8,10 +8,14 @@ import { ApiService } from './../../shared/services/api.service';
 })
 export class GalleryComponent implements OnInit{
 
+public galleryCharacters!: any [];
+
 constructor (private service: ApiService){}
 
 ngOnInit(): void {
-  this.service.getCharacters().subscribe((datos)=>{console.log(datos)});
+  this.service.getCharacters().subscribe((datos:any)=>{
+    this.galleryCharacters = [...datos.results]
+  });
 }
 
 }

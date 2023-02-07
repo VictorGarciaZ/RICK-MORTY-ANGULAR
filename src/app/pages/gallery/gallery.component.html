@@ -1,1 +1,9 @@
-<h3>ESTA ES LA GALERIA DE RICK Y MORTY</h3>
+<div class="gallery" *ngIf="galleryCharacters">
+    <div *ngFor="let character of galleryCharacters" class="gallery_card"
+        [ngStyle]="{'backgroundColor' : character.status === 'Alive' ? '#68EA37' : character.status === 'Dead' ? 'red' : 'grey'}">
+        <p>{{character.id}}</p>
+        <h3>{{character.name}}</h3>
+        <img src={{character.image}} alt={{character.name}} class="gallery_img">
+        <p>{{ character.species }}</p>
+    </div>
+</div>

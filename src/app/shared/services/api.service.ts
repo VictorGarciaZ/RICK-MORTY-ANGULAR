@@ -8,6 +8,7 @@ import { Injectable } from '@angular/core';
 })
 
 export class ApiService {
+  
  public API_URL: string = 'https://rickandmortyapi.com/api/character?page=1';
   constructor( private http: HttpClient) { }
 
